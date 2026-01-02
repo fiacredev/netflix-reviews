@@ -1,0 +1,49 @@
+# Byte-compiled and cache artifacts
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Distribution and packaging
+build/
+dist/
+*.egg-info/
+.eggs/
+pip-wheel-metadata/
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# Jupyter and IPython
+.ipynb_checkpoints/
+profile_default/
+ipython_config.py
+.pytest_cache/
+.jupyter/
+notebook.log
+
+# Generated analysis artifacts
+outputs/
+reports/generated/
+*.pkl
+*.joblib
+*.log
+*.csv.gz
+
+# Operating system files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor and IDE settings
+.idea/
+.vscode/
+*.swp
+*~
+
+# Local environment overrides
+.env
+.env.local
