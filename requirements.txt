@@ -1,0 +1,19 @@
+# Data handling
+pandas==2.2.3
+numpy==1.26.4
+
+# Natural language processing
+nltk==3.8.1
+textblob==0.18.0
+gensim==4.3.3
+
+# Visualisation
+matplotlib==3.8.4
+seaborn==0.13.2
+pyLDAvis==3.0.0
+wordcloud==1.9.3
+
+# Environment and notebooks
+jupyterlab==4.2.5
+notebook==7.2.2
+ipython==8.18.1
