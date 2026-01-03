@@ -1,0 +1,17 @@
+name: netflix-reviews
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.11
+  - pandas=2.2.3
+  - numpy=1.26.4
+  - nltk=3.8.1
+  - gensim=4.3.3
+  - matplotlib=3.8.4
+  - seaborn=0.13.2
+  - pyLDAvis=3.0.0
+  - pip
+  - pip:
+      - textblob==0.18.0
+      - wordcloud==1.9.3
