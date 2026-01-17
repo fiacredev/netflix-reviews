@@ -2,6 +2,10 @@
 
 The functions mirror the logic used in `netflix.ipynb` so that results can be
 reproduced from a terminal without opening Jupyter.
+
+The helpers are organised in three layers: the text level functions work on a
+single string, the series level functions apply them to a whole column, and
+the reporting scripts build on top of both.
 """
 
 from __future__ import annotations
