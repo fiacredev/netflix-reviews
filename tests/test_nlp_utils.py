@@ -60,3 +60,14 @@ class StopwordTests(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+class GetSentimentTests(unittest.TestCase):
+    def test_positive_text_has_a_positive_polarity(self):
+        self.assertGreater(get_sentiment("I love this application, it is wonderful"), 0.0)
+
+    def test_negative_text_has_a_negative_polarity(self):
+        self.assertLess(get_sentiment("This app is terrible and broken"), 0.0)
+
+    def test_empty_text_is_neutral(self):
+        self.assertEqual(get_sentiment(""), 0.0)
