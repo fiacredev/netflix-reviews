@@ -38,6 +38,11 @@ reports/generated/
 Thumbs.db
 desktop.ini
 
+# Notebook exports and scratch data
+exports/
+scratch/
+*.ipynb.html
+
 # Editor and IDE settings
 .idea/
 .vscode/
