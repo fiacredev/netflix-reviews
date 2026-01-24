@@ -16,9 +16,8 @@ from pathlib import Path
 import pandas as pd
 from gensim.utils import simple_preprocess
 
+from config import DEFAULT_DATASET
 from nlp_utils import build_stopwords, get_sentiment, label_sentiment, preprocess_text
-
-DEFAULT_DATASET = "netflix_reviews.csv"
 
 
 def count_terms(path: str | Path = DEFAULT_DATASET) -> Counter:
@@ -38,7 +37,7 @@ def count_terms(path: str | Path = DEFAULT_DATASET) -> Counter:
 
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--path", default=DEFAULT_DATASET, help="path to the reviews csv")
+    parser.add_argument("--path", default=str(DEFAULT_DATASET), help="path to the reviews csv")
     parser.add_argument("--top", type=int, default=25, help="number of terms to display")
     args = parser.parse_args()
 

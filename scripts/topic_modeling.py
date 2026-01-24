@@ -19,12 +19,8 @@ import pandas as pd
 from gensim import corpora
 from gensim.utils import simple_preprocess
 
+from config import DEFAULT_DATASET, NUM_PASSES, NUM_TOPICS, RANDOM_SEED
 from nlp_utils import build_stopwords, get_sentiment, label_sentiment, preprocess_text
-
-DEFAULT_DATASET = "netflix_reviews.csv"
-NUM_TOPICS = 5
-NUM_PASSES = 5
-RANDOM_SEED = 42
 
 
 def negative_reviews(path: str | Path = DEFAULT_DATASET) -> pd.DataFrame:
@@ -61,7 +57,7 @@ def train_model(corpus, dictionary, num_topics: int, num_passes: int):
 
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--path", default=DEFAULT_DATASET, help="path to the reviews csv")
+    parser.add_argument("--path", default=str(DEFAULT_DATASET), help="path to the reviews csv")
     parser.add_argument("--topics", type=int, default=NUM_TOPICS)
     parser.add_argument("--passes", type=int, default=NUM_PASSES)
     args = parser.parse_args()

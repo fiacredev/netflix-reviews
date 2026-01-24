@@ -17,10 +17,8 @@ from pathlib import Path
 
 import pandas as pd
 
+from config import DEFAULT_DATASET, OUTPUT_DIR
 from nlp_utils import get_sentiment, label_sentiment, preprocess_text
-
-DEFAULT_DATASET = "netflix_reviews.csv"
-OUTPUT_DIR = Path("outputs")
 
 
 def build_frame(path: str | Path = DEFAULT_DATASET) -> pd.DataFrame:
@@ -37,7 +35,7 @@ def build_frame(path: str | Path = DEFAULT_DATASET) -> pd.DataFrame:
 
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--path", default=DEFAULT_DATASET, help="path to the reviews csv")
+    parser.add_argument("--path", default=str(DEFAULT_DATASET), help="path to the reviews csv")
     parser.add_argument("--output-dir", default=str(OUTPUT_DIR))
     args = parser.parse_args()
 
