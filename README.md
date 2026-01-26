@@ -63,3 +63,33 @@ reviews. The full schema is documented in `docs/data_dictionary.md`.
    inspect the result with `pyLDAvis`.
 
 The full description lives in `docs/methodology.md`.
+
+## Results
+
+### The complaints fall into five recurring themes
+
+| Topic | Theme | Representative keywords |
+| --- | --- | --- |
+| 0 | Account, payment and access failures | unable, cant, payment, open, error, account |
+| 1 | Content quality and discovery | movies, bad, shows, quality, option, want |
+| 2 | App updates and content frustration | update, tv, new, hate, horrible, terrible |
+| 3 | Playback and black screen errors | please, screen, fix, black, play, video |
+| 4 | Subscription value and pricing | money, worst, pay, subscription, watch |
+
+### The vocabulary of complaints is repetitive
+
+The most frequent terms in the negative reviews are `watch`, `cant`, `even`,
+`please`, `movies`, `update`, `bad`, `shows`, `fix`, `worst`, `screen`,
+`service`, `annoying`, `account` and `unable`. The same words repeat across
+thousands of reviews, which is why a keyword view is informative on this
+dataset.
+
+### Product reliability drives the negative score
+
+Playback failures, black screens and buffering appear in a large share of the
+technical complaints, while pricing complaints dominate the words around
+`money`, `pay` and `subscription`. The two groups dominate the negative
+sentiment of the whole dataset.
+
+Detailed numbers are in `docs/findings.md`, and the themes are discussed in
+`docs/themes.md`.
