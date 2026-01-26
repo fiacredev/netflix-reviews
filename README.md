@@ -93,3 +93,19 @@ sentiment of the whole dataset.
 
 Detailed numbers are in `docs/findings.md`, and the themes are discussed in
 `docs/themes.md`.
+
+## Contributing
+
+Contributions are welcome, in particular new visualisations, alternative
+topic counts and documentation that clarifies a step of the pipeline. Please
+read `CONTRIBUTING.md` first, create a branch for your change and run the
+tests before opening a pull request.
+
+```bash
+python -m unittest discover -s tests -v
+make check
+```
+
+## License
+
+Released under the MIT License. See `LICENSE` for the full text.
