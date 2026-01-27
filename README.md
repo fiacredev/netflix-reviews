@@ -22,7 +22,10 @@ dominate the complaints.
 - [Dataset](#dataset)
 - [Methodology](#methodology)
 - [Results](#results)
-- [Layout](#layout)
+- [Getting started](#getting-started)
+- [Project structure](#project-structure)
+- [Reproducibility](#reproducibility)
+- [Limitations](#limitations)
 - [Contributing](#contributing)
 - [License](#license)
 
@@ -38,9 +41,21 @@ The analysis lives in a single notebook that runs from top to bottom:
 6. an LDA model extracts the recurring complaint themes.
 
 The notebook stores its outputs, so the committed file shows the exact
-results. The scripts in `scripts/` mirror the same logic for terminal and
-continuous integration use, and the documentation in `docs/` explains every
-step in detail.
+results that were produced. The scripts in `scripts/` mirror the same logic
+for terminal and continuous integration use, and the documentation in `docs/`
+explains every step in detail.
+
+### Notebook walkthrough
+
+| Stage | Cells | Description |
+| --- | --- | --- |
+| Setup | 1 | Imports for data handling, NLP, topic modelling and visualisation. |
+| Loading | 2 | Reads the CSV and prints the shape and the columns. |
+| Cleaning | 3 to 8 | Text preprocessing, missing values, timestamps and column selection. |
+| Ratings | 9 | Distribution of the star scores. |
+| Sentiment | 10 to 13 | Polarity scoring, labelling, preview and the sentiment crosstab. |
+| Keywords | 14 to 16 | Stopwords and the word cloud of the negative reviews. |
+| Topics | 17 to 24 | Tokenisation, corpus, LDA model, topic keywords and the interactive view. |
 
 ## Key findings
 
@@ -116,13 +131,60 @@ sentiment of the whole dataset.
 Detailed numbers are in `docs/findings.md`, and the themes are discussed in
 `docs/themes.md`.
 
-## Layout
+## Getting started
 
-- `netflix.ipynb` - the analysis notebook.
-- `netflix_reviews.csv` - the raw review dataset.
-- `scripts/` - helper scripts that mirror the notebook.
-- `tests/` - unit tests for the helper modules.
-- `docs/` - written documentation for the analysis.
+```bash
+git clone <repository-url>
+cd netflix-reviews
+python -m venv .venv
+source .venv/bin/activate
+make setup
+```
+
+Then open the notebook:
+
+```bash
+make notebook
+```
+
+Or run the pipeline from the terminal:
+
+```bash
+make check
+make sentiment
+make topics
+```
+
+## Project structure
+
+```
+netflix-reviews/
+├── netflix.ipynb            the analysis notebook, executed top to bottom
+├── netflix_reviews.csv      the raw review dataset
+├── requirements.txt         pinned Python dependencies
+├── environment.yml          conda environment specification
+├── Makefile                 shortcuts for the common commands
+├── docs/                    written documentation for the analysis
+├── scripts/                 helper scripts that mirror the notebook
+└── tests/                   unit tests for the helper modules
+```
+
+## Reproducibility
+
+The dataset travels with the repository and is never modified on disk. All
+cleaning happens in memory, no sampling is used and the topic model can be
+seeded through `scripts/config.py`. The exact versions are pinned in
+`requirements.txt`, and the continuous integration workflow runs the tests and
+validates the notebook on every push. More details are in
+`docs/reproducibility.md`.
+
+## Limitations
+
+`TextBlob` relies on a lexicon, so sarcasm and domain specific slang are
+misread; the rating and the detected polarity disagree on roughly a quarter of
+the single star reviews; and the dataset only covers the Google Play Store,
+so it describes Android users of the Netflix application. The full list is in
+`docs/limitations.md`.
 
 ## Contributing
 
