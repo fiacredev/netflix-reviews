@@ -1,24 +1,46 @@
-# Netflix Reviews Analysis
+# Netflix Reviews: Sentiment Analysis and Topic Modeling
 
-An exploratory analysis of Netflix mobile application reviews covering data
-cleaning, sentiment scoring and topic modelling.
+[![Python](https://img.shields.io/badge/python-3.11-blue.svg)](https://www.python.org/)
+[![Jupyter](https://img.shields.io/badge/jupyter-notebook-orange.svg)](https://jupyter.org/)
+[![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
+[![Dataset](https://img.shields.io/badge/reviews-113%2C068-lightgrey.svg)](netflix_reviews.csv)
+[![Last update](https://img.shields.io/badge/last%20update-January%202026-brightgreen.svg)](docs/release_notes.md)
 
-The project studies 113,068 reviews collected from the Google Play Store
-between September 2018 and June 2024 and answers three questions: how do
-ratings distribute, what language do unhappy customers use, and which product
-themes dominate the complaints.
+An exploratory analysis of 113,068 Netflix mobile application reviews
+covering data cleaning, sentiment scoring, keyword analysis and latent
+Dirichlet allocation topic modelling.
 
-## Status
+The project studies reviews collected from the Google Play Store between
+September 2018 and June 2024 and answers three questions: how do ratings
+distribute, what language do unhappy customers use, and which product themes
+dominate the complaints.
 
-The analysis notebook and the helper scripts are complete. The documentation
-is being finalised.
+## Table of contents
 
-## Layout
+- [Overview](#overview)
+- [Key findings](#key-findings)
+- [Dataset](#dataset)
+- [Methodology](#methodology)
+- [Results](#results)
+- [Layout](#layout)
+- [Contributing](#contributing)
+- [License](#license)
 
-- `netflix.ipynb` - the analysis notebook.
-- `netflix_reviews.csv` - the raw review dataset.
-- `scripts/` - helper scripts that mirror the notebook.
-- `docs/` - written documentation for the analysis.
+## Overview
+
+The analysis lives in a single notebook that runs from top to bottom:
+
+1. the raw reviews are loaded and profiled,
+2. the review text is cleaned and the missing values are handled,
+3. every review is scored for sentiment and labelled,
+4. the ratings and the sentiment are visualised,
+5. the negative reviews are summarised with a word cloud,
+6. an LDA model extracts the recurring complaint themes.
+
+The notebook stores its outputs, so the committed file shows the exact
+results. The scripts in `scripts/` mirror the same logic for terminal and
+continuous integration use, and the documentation in `docs/` explains every
+step in detail.
 
 ## Key findings
 
@@ -93,6 +115,14 @@ sentiment of the whole dataset.
 
 Detailed numbers are in `docs/findings.md`, and the themes are discussed in
 `docs/themes.md`.
+
+## Layout
+
+- `netflix.ipynb` - the analysis notebook.
+- `netflix_reviews.csv` - the raw review dataset.
+- `scripts/` - helper scripts that mirror the notebook.
+- `tests/` - unit tests for the helper modules.
+- `docs/` - written documentation for the analysis.
 
 ## Contributing
 
