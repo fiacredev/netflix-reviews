@@ -26,8 +26,10 @@ dominate the complaints.
 - [Project structure](#project-structure)
 - [Reproducibility](#reproducibility)
 - [Limitations](#limitations)
+- [Documentation](#documentation)
 - [Contributing](#contributing)
 - [License](#license)
+- [Contact](#contact)
 
 ## Overview
 
@@ -186,6 +188,21 @@ the single star reviews; and the dataset only covers the Google Play Store,
 so it describes Android users of the Netflix application. The full list is in
 `docs/limitations.md`.
 
+## Documentation
+
+| Document | Contents |
+| --- | --- |
+| `docs/data_dictionary.md` | Every column of the dataset, with types and missing values. |
+| `docs/dataset_profile.md` | Volume, ratings and data quality of the collection. |
+| `docs/methodology.md` | The eight steps of the analysis pipeline. |
+| `docs/findings.md` | The numbers behind the key findings. |
+| `docs/themes.md` | The five complaint themes in detail. |
+| `docs/reproducibility.md` | Environment, determinism and verification steps. |
+| `docs/limitations.md` | What the analysis cannot show. |
+| `docs/usage.md` | Command line examples for every script. |
+| `docs/glossary.md` | The terms used throughout the project. |
+| `docs/faq.md` | Answers to the questions that come up most often. |
+
 ## Contributing
 
 Contributions are welcome, in particular new visualisations, alternative
@@ -201,3 +218,13 @@ make check
 ## License
 
 Released under the MIT License. See `LICENSE` for the full text.
+
+## Contact
+
+Maintainer: **fiacredev**
+
+- Email: `fiacredeveloper@gamil.com`
+- Repository issues: use the issue templates in `.github/ISSUE_TEMPLATE`.
+
+Questions about the method, the results or the reproduction steps are welcome
+by email or in an issue.
