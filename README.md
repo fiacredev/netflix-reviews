@@ -4,6 +4,7 @@
 [![Jupyter](https://img.shields.io/badge/jupyter-notebook-orange.svg)](https://jupyter.org/)
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
 [![Dataset](https://img.shields.io/badge/reviews-113%2C068-lightgrey.svg)](netflix_reviews.csv)
+[![Topics](https://img.shields.io/badge/LDA%20topics-5-blue.svg)](docs/themes.md)
 [![Last update](https://img.shields.io/badge/last%20update-January%202026-brightgreen.svg)](docs/release_notes.md)
 
 An exploratory analysis of 113,068 Netflix mobile application reviews
@@ -14,6 +15,8 @@ The project studies reviews collected from the Google Play Store between
 September 2018 and June 2024 and answers three questions: how do ratings
 distribute, what language do unhappy customers use, and which product themes
 dominate the complaints.
+
+---
 
 ## Table of contents
 
@@ -30,6 +33,8 @@ dominate the complaints.
 - [Contributing](#contributing)
 - [License](#license)
 - [Contact](#contact)
+
+---
 
 ## Overview
 
@@ -83,6 +88,17 @@ name, the review body, the star rating, the number of thumbs up, the app
 version and the timestamp. Two reviews have no text, one reviewer is
 anonymised, and the two version columns are missing on the 16,491 oldest
 reviews. The full schema is documented in `docs/data_dictionary.md`.
+
+| Column | Type | Description |
+| --- | --- | --- |
+| `reviewId` | string | Unique identifier of the review. |
+| `userName` | string | Display name of the reviewer. |
+| `content` | string | Body of the review. |
+| `score` | integer | Star rating from 1 to 5. |
+| `thumbsUpCount` | integer | Users that marked the review as helpful. |
+| `reviewCreatedVersion` | string | App version used by the reviewer. |
+| `at` | datetime | Timestamp of the review. |
+| `appVersion` | string | Application version reported by the device. |
 
 ## Methodology
 
