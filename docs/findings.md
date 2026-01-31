@@ -38,11 +38,11 @@ into five recurring themes:
 
 | Topic | Theme | Representative keywords |
 | --- | --- | --- |
-| 0 | Account, payment and access failures | unable, cant, payment, open, error, account |
-| 1 | Content quality and discovery | movies, bad, shows, quality, option, want |
-| 2 | App updates and content frustration | update, tv, new, hate, horrible, terrible |
-| 3 | Playback and black screen errors | please, screen, fix, black, play, video |
-| 4 | Subscription value and pricing | money, worst, pay, subscription, watch |
+| 0 | Account, payment and subscription access | payment, account, worst, cant, password, sign, money, bad, even, subscription |
+| 1 | Playback, video quality and subtitles | screen, black, brightness, quality, video, subtitles, dark, watch, cant, see |
+| 2 | App errors, updates and requested fixes | please, open, fix, unable, error, cant, try, update, play, keeps |
+| 3 | Price, value and streaming complaints | cant, use, watch, even, now, expensive, streaming, pay, money, content |
+| 4 | Content quality and catalogue complaints | movies, watch, shows, dont, bad, hate, want, new, watching, im |
 
 ## Practical takeaways
 

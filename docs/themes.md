@@ -3,48 +3,50 @@
 A short guide to the five topics discovered by the LDA model over the negative
 reviews.
 
-## Topic 0: account, payment and access failures
+## Topic 0: account, payment and subscription access
 
-Keywords: `unable`, `cant`, `payment`, `open`, `error`, `worst`, `wrong`,
-`account`.
+Keywords: `payment`, `account`, `worst`, `cant`, `password`, `sign`, `money`,
+`bad`, `even`, `subscription`.
 
-Reviews in this group describe an account that cannot be opened, a payment
-that is charged twice or a subscription that cannot be cancelled. The language
-is short and absolute, which is why the theme scores so high on negative
-polarity.
+Reviews in this group describe an account that cannot be opened or signed in,
+a payment that is charged twice or a subscription that cannot be cancelled.
+The language is short and absolute, which is why the theme scores so high on
+negative polarity.
 
-## Topic 1: content quality and discovery
+## Topic 1: playback, video quality and subtitles
 
-Keywords: `movies`, `bad`, `shows`, `quality`, `option`, `good`, `want`,
-`add`.
-
-Here users argue about the catalogue itself: too few new releases, too many
-removals, a recommendation feed that repeats the same titles.
-
-## Topic 2: app updates and content frustration
-
-Keywords: `update`, `tv`, `watch`, `new`, `cant`, `hate`, `use`, `now`,
-`horrible`, `terrible`.
-
-The dominant complaint is that an app update changed the interface or removed
-a feature the user depended on.
-
-## Topic 3: playback and black screen errors
-
-Keywords: `please`, `screen`, `fix`, `watch`, `black`, `play`, `cant`,
-`video`, `try`, `annoying`.
+Keywords: `screen`, `black`, `brightness`, `quality`, `video`, `subtitles`,
+`dark`, `watch`, `cant`, `see`.
 
 The most concrete technical complaint: the application plays a black screen,
-freezes or buffers. Users often repeat the same words across reviews, which
-makes this theme the easiest to track over time.
+shows a picture that is too dark, renders the wrong subtitles or refuses to
+play the video at all.
 
-## Topic 4: subscription value and pricing
+## Topic 2: app errors, updates and requested fixes
 
-Keywords: `money`, `worst`, `pay`, `subscription`, `watch`, `account`.
+Keywords: `please`, `open`, `fix`, `unable`, `error`, `cant`, `try`, `update`,
+`play`, `keeps`.
+
+Users describe an application that crashes, refuses to open or keeps failing
+after an update, and they ask for a fix. This theme collects the messages
+that describe a broken build rather than a missing feature.
+
+## Topic 3: price, value and streaming complaints
+
+Keywords: `cant`, `use`, `watch`, `even`, `now`, `expensive`, `streaming`,
+`pay`, `money`, `content`.
 
 Users who are satisfied with the product still complain about the price, the
 price increase or the value of the plan. This theme is the bridge between
 product quality and commercial perception.
+
+## Topic 4: content quality and catalogue complaints
+
+Keywords: `movies`, `watch`, `shows`, `dont`, `bad`, `hate`, `want`, `new`,
+`watching`, `im`.
+
+Here users argue about the catalogue itself: too few new releases, too many
+removals, a recommendation feed that repeats the same titles.
 
 ## Cross cutting observations
 
