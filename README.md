@@ -234,7 +234,7 @@ make check
 
 Maintainer: **fiacredev**
 
-- Email: `fiacredeveloper@gamil.com`
+- Email: `fiacredeveloper@gmail.com`
 - Repository issues: use the issue templates in `.github/ISSUE_TEMPLATE`.
 
 Questions about the method, the results or the reproduction steps are welcome
