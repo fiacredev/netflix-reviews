@@ -31,7 +31,6 @@ dominate the complaints.
 - [Limitations](#limitations)
 - [Documentation](#documentation)
 - [Contributing](#contributing)
-- [License](#license)
 - [Contact](#contact)
 
 ---
@@ -230,10 +229,6 @@ tests before opening a pull request.
 python -m unittest discover -s tests -v
 make check
 ```
-
-## License
-
-Released under the MIT License. See `LICENSE` for the full text.
 
 ## Contact
 
