@@ -69,8 +69,8 @@ def main() -> None:
 
     print(f"Documents: {len(corpus)}  Vocabulary: {len(dictionary)}")
     print(f"Topics: {args.topics}  Passes: {args.passes}\n")
-    for topic_id, words in model.print_topics(num_topics=-1):
-        keywords = ", ".join(word for word, _ in words[:10])
+    for topic_id in range(model.num_topics):
+        keywords = ", ".join(word for word, _ in model.show_topic(topic_id, topn=10))
         print(f"Topic {topic_id}: {keywords}")
 
 
